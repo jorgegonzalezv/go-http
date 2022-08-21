@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  go-dev:
+    container_name: go-dev-container
+    image: golang:1.16
+    volumes:
+      - ..:/go/src
+    ports:
+      - 8080:8080
+    command: tail -F anything
